@@ -1,0 +1,23 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„õèŸ
+j
+java:S2095U"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ƒ»ÊŞûÿÿÿÿ
+y	java:S116!"_Rename this field "CustomerAddressLabel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò“·Ÿÿÿÿÿÿ
+w	java:S116$"]Rename this field "CustomerBackToHome" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷à–ƒûÿÿÿÿ
+r	java:S116'"]Rename this field "CustomerEmailLabel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ØÇ°
+o	java:S116*"ZRename this field "CustomerIDlabel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö¸—
+q	java:S116-"\Rename this field "CustomerNameLabel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÖğÒ
+t	java:S1160"`Rename this field "CustomerPasswordLabel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•£E
+w	java:S1163"]Rename this field "CustomerPhoneLabel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·¡¥’ÿÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(÷ÉÕÑøÿÿÿÿ
+c	java:S100<"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨î¾ö
+‚
+java:S1130<"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¨î¾ö
+h	java:S100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õşÊŞøÿÿÿÿ
+
+java:S1130B"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(õşÊŞøÿÿÿÿ8±à§˜0
+X
+java:S2696C"6Make the enclosing method "static" or remove this set.(ğâÑÙøÿÿÿÿ8ƒ†¾¯˜0
+]	java:S125D"<This block of commented-out lines of code should be removed.(ùèÑãûÿÿÿÿ8±à§˜0
+=
+java:S1125J"'Remove the unnecessary boolean literal.(²ñ´

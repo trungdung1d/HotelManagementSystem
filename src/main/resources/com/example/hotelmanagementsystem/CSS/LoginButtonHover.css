@@ -1,0 +1,56 @@
+.customerLoginBtn{
+    -fx-background-color: lightyellow;
+    -fx-border-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.customerLoginBtn:hover{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-scale-X: 1.10;
+    -fx-scale-y: 1.05;
+}
+
+.customerLoginBtn:pressed{
+    -fx-scale-y: .95;
+    -fx-scale-x: 1;
+}
+
+.managerLoginBtn{
+    -fx-background-color:  MistyRose;
+    -fx-border-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.managerLoginBtn:hover{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-scale-X: 1.10;
+    -fx-scale-y: 1.05;
+}
+
+.managerLoginBtn:pressed{
+    -fx-scale-y: .95;
+    -fx-scale-x: 1;
+}
+
+.adminLoginBtn{
+    -fx-background-color:   lightcyan;
+    -fx-border-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.adminLoginBtn:hover{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-scale-X: 1.10;
+    -fx-scale-y: 1.05;
+}
+
+.adminLoginBtn:pressed{
+    -fx-scale-y: .95;
+    -fx-scale-x: 1;
+}

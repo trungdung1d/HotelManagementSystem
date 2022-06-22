@@ -1,0 +1,53 @@
+
+E
+java:S3740?"/Provide the parametrized type for this generic.(ú™œ
+o
+java:S2293H"YReplace the type specification in this constructor call with the diamond operator ("<>").(í¢×’
+t
+java:S2293I"YReplace the type specification in this constructor call with the diamond operator ("<>").(Îü…Èıÿÿÿÿ
+o
+java:S2293J"YReplace the type specification in this constructor call with the diamond operator ("<>").(£ôšş
+o
+java:S2293K"YReplace the type specification in this constructor call with the diamond operator ("<>").(ƒİì†
+o
+java:S2293L"YReplace the type specification in this constructor call with the diamond operator ("<>").(µ©øš
+t
+java:S2293M"YReplace the type specification in this constructor call with the diamond operator ("<>").(Óâî¦ıÿÿÿÿ
+i
+java:S1192¦"RDefine a constant instead of duplicating this literal "-glyph-size:20px;" 4 times.(³õœ
+k
+java:S1192¥"TDefine a constant instead of duplicating this literal " -fx-cursor: hand ;" 4 times.(°Äœó
+k	java:S117]"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆŒùæÿÿÿÿÿ
+f	java:S117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ÄÔ
+f	java:S117_"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êâ½“
+k	java:S117`"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şø¸ıÿÿÿÿ
+f	java:S117a"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª˜˜’
+e	java:S117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áåöo
+D
+java:S1604”"(Make this anonymous inner class a lambda(úĞŠ¨øÿÿÿÿ
+W	java:S110˜"<This class has 9 parents which is greater than 5 authorized.(ö€òàıÿÿÿÿ
+x
+java:S1488˜"\Immediately return this expression instead of assigning it to the temporary variable "cell".(ö€òàıÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ä‡îªıÿÿÿÿ
+j
+java:S2095Y"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ƒ»ÊŞûÿÿÿÿ
+‚	java:S116*"hRename this field "CustomerCheckOutDetailsSearch" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³®ø’ÿÿÿÿÿ
+|	java:S116-"gRename this field "CustomerCheckOutDetailsTable" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º–’ô
+j	java:S1160"PRename this field "IDCol" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùáâ‹úÿÿÿÿ
+l	java:S1163"RRename this field "RoomCol" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö£ùüÿÿÿÿ
+h	java:S116D"SRename this field "TableRow" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡›ò
+B
+java:S1602r",Remove useless curly braces around statement(áÎ‘
+V	java:S125z"<This block of commented-out lines of code should be removed.(¹ÔÉµøÿÿÿÿ
+\
+java:S1126~"AReplace this if-then-else statement by a single return statement.(µ‰ûÿÿÿÿ
+W	java:S125€"<This block of commented-out lines of code should be removed.(¥ˆüüÿÿÿÿ
+H
+java:S1602ª",Remove useless curly braces around statement(í€êƒüÿÿÿÿ
+C
+java:S1602³",Remove useless curly braces around statement(Ó©Š
+W	java:S125Î"<This block of commented-out lines of code should be removed.(ù€¦ÿÿÿÿÿ
+W	java:S125Ó"<This block of commented-out lines of code should be removed.(Ú×‰Ìşÿÿÿÿ
+X
+java:S1117í"<Rename "priceDay" which hides the field declared at line 59.(‹§Å¾şÿÿÿÿ
+N	java:S106ú"9Replace this use of System.out or System.err by a logger.(¯Ö—Y

@@ -20,16 +20,17 @@ public class CustomerHome implements Initializable {
     @FXML
     private StackPane rootPane;
 
+    Main m = new Main();
+
     @FXML
     void BackToLoginPage(ActionEvent event) throws IOException {
-//        CommonTask.pageNavigation("/com.example.hotelmanagementsystem/Login.fxml", Main.stage,this.getClass(),"Customer Home", 600, 400);
+        m.changeScene(event, "Login.fxml", "Customer Home");
         welcome = 0;
     }
 
     @FXML
     void CustomerInfo(ActionEvent event) throws IOException {
-//        CommonTask.pageNavigation("/com.example.hotelmanagementsystem/CustomerInfo.fxml", null,this.getClass(),"Customer Home", 550, 400);
-
+        m.changeScene(event, "CustomerInfo.fxml", "Customer Home");
     }
 
     @Override
@@ -39,5 +40,4 @@ public class CustomerHome implements Initializable {
             welcome = 1;
         }
     }
-
 }

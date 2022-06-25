@@ -18,8 +18,8 @@ public class ManagerCheckOutDetailsTable {
         return ID;
     }
 
-    public void setID(String id) {
-        this.ID = id;
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
     public String getRoom() {
@@ -27,7 +27,7 @@ public class ManagerCheckOutDetailsTable {
     }
 
     public void setRoom(String room) {
-        this.Room = room;
+        Room = room;
     }
 
     public String getType() {
@@ -35,7 +35,7 @@ public class ManagerCheckOutDetailsTable {
     }
 
     public void setType(String type) {
-        this.Type = type;
+        Type = type;
     }
 
     public String getCapacity() {
@@ -43,38 +43,38 @@ public class ManagerCheckOutDetailsTable {
     }
 
     public void setCapacity(String capacity) {
-        this.Capacity = capacity;
+        Capacity = capacity;
     }
 
-    public String getPriceDay() {
+    public String getPriceday() {
         return Priceday;
     }
 
-    public void setPriceDay(String priceday) {
-        this.Priceday = priceday;
+    public void setPriceday(String priceday) {
+        Priceday = priceday;
     }
 
-    public String getTotalPrice() {
+    public String getTotalprice() {
         return Totalprice;
     }
 
-    public void setTotalPrice(String totalprice) {
-        this.Totalprice = totalprice;
+    public void setTotalprice(String totalprice) {
+        Totalprice = totalprice;
     }
 
-    public String getCheckedIn() {
+    public String getCheckedin() {
         return Checkedin;
     }
 
-    public void setCheckedIn(String checkedin) {
-        this.Checkedin = checkedin;
+    public void setCheckedin(String checkedin) {
+        Checkedin = checkedin;
     }
 
-    public String getCheckedOut() {
+    public String getCheckedout() {
         return Checkedout;
     }
 
-    public void setCheckedOut(String checkedout) {
-        this.Checkedout = checkedout;
+    public void setCheckedout(String checkedout) {
+        Checkedout = checkedout;
     }
 }

@@ -25,9 +25,7 @@ import static com.example.hotelmanagementsystem.Customer.Login.CustomerLogin.cur
 
 public class CustomerInfo implements Initializable {
 
-//    public Button CustomerBackToHome;
-//    public StackPane rootPane;
-//    public AnchorPane rootAnchorPane;
+    Main m = new Main();
 
     @FXML
     private Label CustomerAddressLabel;
@@ -65,7 +63,7 @@ public class CustomerInfo implements Initializable {
     @FXML
     void CustomerInfoEdit(ActionEvent event) throws IOException {
         editedFlag = false;
-//        CommonTask.pageNavigation("/com.example.hotelmanagementsystem/CustomerInfoEdit.fxml", (Stage) CustomerBackToHome.getScene().getWindow(),this.getClass(),"User Home", 550, 400);
+        m.changeScene(event, "CustomerInfoEdit.fxml", "Customer Home");
     }
 
     @Override

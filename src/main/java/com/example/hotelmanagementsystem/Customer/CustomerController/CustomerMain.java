@@ -1,20 +1,18 @@
 package com.example.hotelmanagementsystem.Customer.CustomerController;
 
+import com.example.hotelmanagementsystem.Main;
 import com.jfoenix.controls.JFXButton;
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class CustomerMain implements Initializable {
 
@@ -22,7 +20,7 @@ public class CustomerMain implements Initializable {
     private AnchorPane CustomerMainPane;
 
     @FXML
-    private BorderPane borderpane;
+    public BorderPane borderpane;
 
     @FXML
     private JFXButton checkInID;
@@ -31,16 +29,7 @@ public class CustomerMain implements Initializable {
     private JFXButton checkInOutID;
 
     @FXML
-    private FontAwesomeIconView closeWindow;
-
-    @FXML
     private JFXButton goHomeID;
-
-    @FXML
-    private FontAwesomeIconView maximizeWindow;
-
-    @FXML
-    private FontAwesomeIconView minimizeWindow;
 
     @FXML
     private JFXButton roomDetailsID;
@@ -48,72 +37,42 @@ public class CustomerMain implements Initializable {
     @FXML
     private StackPane rootPane;
 
-    @FXML
-    void GoCheckDetails(ActionEvent event) {
-        windowLoad("/com.example.hotelmanagementsystem/CustomerCheckOut.fxml");
-    }
+    Main m = new Main();
 
     @FXML
-    void GoCheckIn(ActionEvent event) {
-        windowLoadStackPane("/com.example.hotelmanagementsystem/CustomerCheckIn.fxml");
+    void GoCheckDetails(ActionEvent event) throws IOException {
+        m.changeScene(event, "CustomerCheckOut.fxml", null);
     }
 
     @FXML
-    void GoHome(ActionEvent event) {
-        windowLoadStackPane("/com.example.hotelmanagementsystem/CustomerHome.fxml");
+    void GoCheckIn(ActionEvent event) throws IOException {
+        m.changeScene(event,"CustomerCheckIn.fxml", null);
     }
 
     @FXML
-    void GoRoomDetails(ActionEvent event) {
-        windowLoad("/com.example.hotelmanagementsystem/CustomerRoomDetails.fxml");
+    void GoHome(ActionEvent event) throws IOException {
+        m.changeScene(event,"CustomerHome.fxml", null);
     }
 
-    private void minimizeStageOfNode(Node node) {
-        ((Stage) (node).getScene().getWindow()).setIconified(true);
-    }
-
-    public void windowLoad(String URL)
-    {
-        try
-        {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource(URL));
-            borderpane.setCenter(pane);
-        }
-        catch(Exception err)
-        {
-            System.out.println("Problem : " + err);
-        }
-    }
-
-    public void windowLoadStackPane(String URL)
-    {
-        try
-        {
-            StackPane pane = FXMLLoader.load(getClass().getResource(URL));
-            borderpane.setCenter(pane);
-        }
-        catch(Exception err)
-        {
-            System.out.println("Problem : " + err);
-        }
+    @FXML
+    void GoRoomDetails(ActionEvent event) throws IOException {
+        m.changeScene(event,"CustomerRoomDetails.fxml",null);
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        windowLoadStackPane("CustomerHome.fxml");
+    }
 
-        windowLoadStackPane("/com.example.hotelmanagementsystem/CustomerHome.fxml");
-        closeWindow.setOnMouseClicked(event -> {
-            System.exit(0);
-        });
-
-        minimizeWindow.setOnMouseClicked(event -> {
-            minimizeStageOfNode((Node) event.getSource());
-        });
-
-        AtomicInteger maxWindow = new AtomicInteger();
-        maximizeWindow.setOnMouseClicked(event -> {
-            Stage stage1 = (Stage) CustomerMainPane.getScene().getWindow();
-            stage1.setMaximized(!stage1.isMaximized());
-        });
+    public void windowLoadStackPane(String fxml){
+        try
+        {
+            StackPane pane = FXMLLoader.load(Main.class.getResource(fxml));
+            borderpane.setCenter(pane);
+        }
+        catch(Exception e)
+        {
+            System.out.println("Problem : " + e);
+        }
     }
 }

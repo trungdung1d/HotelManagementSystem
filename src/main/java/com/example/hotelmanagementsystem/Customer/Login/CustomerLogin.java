@@ -12,6 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,6 +21,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class    CustomerLogin implements Initializable {
+
     Main m = new Main();
     public static String currentCustomerNameID;
     @FXML
@@ -38,13 +40,12 @@ public class    CustomerLogin implements Initializable {
     private StackPane rootPane;
 
     @FXML
-    void BackToMain(ActionEvent mouseEvent) throws Exception {
-        Main m = new Main();
-        m.changeScene("Login.fxml", "Hotel Management System");
+    void BackToMain(ActionEvent mouseEvent) throws IOException {
+        m.changeScene(mouseEvent,"Login.fxml", "Hotel Management System");
     }
 
     @FXML
-    void CustomerLogin(ActionEvent actionEvent) throws Exception, SQLException {
+    void CustomerLogin(ActionEvent actionEvent) throws IOException, SQLException {
         Connection connection = DBConnection.getConnections();
         String customerNameID = customerIDField.getText();
         currentCustomerNameID = customerNameID;
@@ -53,28 +54,27 @@ public class    CustomerLogin implements Initializable {
             if(customerNameID.isEmpty() == true || customerPass.isEmpty() == true){
                 Main.showJFXAlert(rootPane, rootAnchorPane, "warning", "Warning!","Username or Password can not be empty!", JFXDialog.DialogTransition.CENTER);
             }else {
-                String sql = "SELECT * FROM CUSTOMERINFO WHERE NID = ? AND PASSWORD = ?";
+                String sql = "SELECT * FROM customerinfo WHERE NID = ? AND PASSWORD = ?";
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setString(1, customerNameID);
                 preparedStatement.setString(2, customerPass);
                 ResultSet resultSet = preparedStatement.executeQuery();
                 if(resultSet.next()){
-                    m.changeScene("CustomerMain.fxml", "Customer Dashboard");
+                    m.changeScene(actionEvent, "CustomerMain.fxml", "Customer Dashboard");
                 }else {
                     Main.showJFXAlert(rootPane, rootAnchorPane, "warning", "Login Failed!", "Wrong Username or Password !", JFXDialog.DialogTransition.CENTER);
                 }
             }
-        }catch (SQLException e){
+        }catch (SQLException e) {
             e.printStackTrace();
-        }finally {
-           // DBConnection.closeConnections();
+        } finally {
+            DBConnection.closeConnections();
         }
     }
 
     @FXML
-    void CustomerSignup(ActionEvent mouseEvent) throws Exception {
-        Main m = new Main();
-        m.changeScene("CustomerSignup.fxml", "Customer Signup");
+    void CustomerSignup(ActionEvent mouseEvent) throws IOException {
+        m.changeScene(mouseEvent ,"CustomerSignup.fxml", "Customer Signup");
     }
 
     @Override

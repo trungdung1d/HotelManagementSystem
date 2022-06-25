@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXComboBox?>
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -119,15 +118,9 @@
         <AnchorPane styleClass="titlePane" stylesheets="@CSS/ManagerMainTitleBarPane1.css">
             <children>
                 <HBox layoutX="450.0" prefHeight="30.0" prefWidth="100.0" styleClass="closePane">
-                    <children>
-                        <FontAwesomeIconView glyphName="CIRCLE" size="18" styleClass="minimizeIcon" />
-                        <FontAwesomeIconView glyphName="CIRCLE" layoutX="10.0" layoutY="20.0" size="18" styleClass="maximizeIcon" />
-                        <FontAwesomeIconView glyphName="CIRCLE" layoutX="22.0" layoutY="20.0" size="18" styleClass="closeIcon" />
-                    </children>
                 </HBox>
                 <HBox prefHeight="30.0" prefWidth="133.0" styleClass="titlePane">
                     <children>
-                        <FontAwesomeIconView glyphName="EDIT" size="18" />
                         <Label style="-fx-text-fill: black;" styleClass="titleText" text="Edit Info" />
                     </children>
                 </HBox>

@@ -7,6 +7,7 @@ import com.jfoenix.controls.JFXTextArea;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -24,6 +25,7 @@ import static com.example.hotelmanagementsystem.Customer.Login.CustomerLogin.cur
 
 public class CustomerInfoEdit implements Initializable {
 
+    Main m = new Main();
     @FXML
     private JFXTextArea CustomerAddressEdit;
 
@@ -55,8 +57,7 @@ public class CustomerInfoEdit implements Initializable {
 
     @FXML
     void BackBtn(ActionEvent event) throws IOException {
-//        CommonTask.pageNavigation("/com.example.hotelmanagementsystem/CustomerInfo.fxml", (Stage) CustomerConfirm.getScene().getWindow(),this.getClass(),"Customer Home", 550, 400);
-
+        m.changeScene(event, "CustomerInfo.fxml", "Customer Home");
     }
 
     @FXML
@@ -71,7 +72,7 @@ public class CustomerInfoEdit implements Initializable {
         if (customerName.isEmpty() || customerID.isEmpty() || customerPassword.isEmpty() || customerEmail.isEmpty() || customerAddress.isEmpty() || customerPhone.isEmpty()) {
             Main.showJFXAlert(rootPane, rootAnchorPane, "warning", "Warning!", "Text field can't be empty!", JFXDialog.DialogTransition.CENTER);
         } else {
-            String sql = "UPDATE CUSTOMERINFO SET NAME = ?, PASSWORD = ?, EMAIL = ?, PHONE = ?, ADDRESS = ? WHERE NID = ?";
+            String sql = "UPDATE customerinfo SET NAME = ?, PASSWORD = ?, EMAIL = ?, PHONE = ?, ADDRESS = ? WHERE NID = ?";
             PreparedStatement preparedStatementUpdate = connection.prepareStatement(sql);
             preparedStatementUpdate.setString(1, customerName);
             preparedStatementUpdate.setString(2, customerPassword);
@@ -81,10 +82,9 @@ public class CustomerInfoEdit implements Initializable {
             preparedStatementUpdate.setString(6, currentCustomerNameID);
             try {
                 preparedStatementUpdate.execute();
-//                CommonTask.showAlert(Alert.AlertType.INFORMATION, "Successful", "Update Successful!");]
+                Main.showAlert(Alert.AlertType.INFORMATION, "Successful", "Update Successful!");
                 editedFlag = true;
-//                CommonTask.pageNavigation("/com.example.hotelmanagement/CustomerInfo.fxml", (Stage) CustomerConfirm.getScene().getWindow(),this.getClass(),"User Home", 550, 400);
-
+                m.changeScene(event, "CustomerInfo.fxml", "Customer Home");
             } catch (SQLException e){
                 Main.showJFXAlert(rootPane, rootAnchorPane, "ERROR", "ERROR!", "Connection Problem!", JFXDialog.DialogTransition.CENTER);
             } finally {

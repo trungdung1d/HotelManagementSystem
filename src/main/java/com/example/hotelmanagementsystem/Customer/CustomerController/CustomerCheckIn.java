@@ -81,7 +81,7 @@ public class CustomerCheckIn implements Initializable {
         if (type.equals("") || price.equals("") || capacity.equals("") || checkdate.equals("null")) {
             Main.showJFXAlert(rootPane, CustomerCheckInPane, "warning", "Warning!", "Field Can't be Empty!", JFXDialog.DialogTransition.CENTER);
         } else {
-            String sql = "INSERT INTO CHECKINOUTINFO (NAME, ID, EMAIL, PHONE, ADDRESS, ROOMNO, CHECKEDIN, ROOMTYPE, CAPACITY, PRICEDAY) VALUES(?,?,?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO checkinoutinfo (NAME, NID, EMAIL, PHONE, ADDRESS, ROOMNO, CHECKEDIN, ROOMTYPE, CAPACITY, PRICEDAY) VALUES(?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, id);
@@ -96,7 +96,7 @@ public class CustomerCheckIn implements Initializable {
 
             try {
                 preparedStatement.execute();
-                String sql1 = "UPDATE ROOMINFO SET STATUS = 'Booked' WHERE ROOM_NO = ?";
+                String sql1 = "UPDATE roominfo SET STATUS = 'Booked' WHERE ROOM_NO = ?";
                 PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
                 preparedStatement1.setString(1, room);
                 preparedStatement1.execute();
@@ -123,7 +123,7 @@ public class CustomerCheckIn implements Initializable {
         Connection connection = DBConnection.getConnections();
         try {
             if(!connection.isClosed()) {
-                String sql = "SELECT * FROM ROOMINFO WHERE ROOM_NO = ?";
+                String sql = "SELECT * FROM roominfo WHERE ROOM_NO = ?";
                 PreparedStatement statement = connection.prepareStatement(sql);
                 statement.setString(1, room);
                 ResultSet resultSet = statement.executeQuery();
@@ -149,7 +149,7 @@ public class CustomerCheckIn implements Initializable {
         Connection connection = DBConnection.getConnections();
         try{
             if(!connection.isClosed()) {
-                String sql = "SELECT * FROM ROOMINFO WHERE STATUS = ?";
+                String sql = "SELECT * FROM roominfo WHERE STATUS = ?";
                 PreparedStatement statement = connection.prepareStatement(sql);
                 statement.setString(1, "Available");
                 ResultSet resultSet = statement.executeQuery();
@@ -170,7 +170,7 @@ public class CustomerCheckIn implements Initializable {
         Connection connection = DBConnection.getConnections();
         try {
             if(!connection.isClosed()){
-                String sql = "SELECT * FROM CUSTOMERINFO WHERE NID = ?";
+                String sql = "SELECT * FROM customerinfo WHERE NID = ?";
                 PreparedStatement statement = connection.prepareStatement(sql);
                 statement.setString(1, currentCustomerNameID);
                 ResultSet resultSet = statement.executeQuery();

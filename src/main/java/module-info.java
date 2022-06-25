@@ -1,6 +1,6 @@
 module com.example.hotelmanagementsystem {
     requires javafx.controls;
-    requires javafx.fxml;
+    requires javafx.base;
     requires javafx.web;
     requires com.dlsc.formsfx;
     requires validatorfx;
@@ -10,12 +10,15 @@ module com.example.hotelmanagementsystem {
     requires com.almasb.fxgl.all;
     requires java.sql;
     requires com.jfoenix;
-    requires fontawesomefx;
     requires itextpdf;
     requires java.datatransfer;
     requires java.desktop;
+    requires org.controlsfx.controls;
 
     opens com.example.hotelmanagementsystem to javafx.fxml, javafx.graphics;
     opens com.example.hotelmanagementsystem.Customer.Login to javafx.fxml,javafx.graphics;
-
+    opens com.example.hotelmanagementsystem.Customer.CustomerController to javafx.fxml, javafx.graphics;
+    opens com.example.hotelmanagementsystem.Manager.Login to javafx.fxml, javafx.graphics;
+    opens com.example.hotelmanagementsystem.Database.TableView to javafx.base;
+    opens com.example.hotelmanagementsystem.Manager.ManagerController to javafx.fxml, javafx.graphics;
 }

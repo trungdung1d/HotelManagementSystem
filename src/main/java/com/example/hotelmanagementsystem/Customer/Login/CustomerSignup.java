@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.image.ImageView;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -41,12 +42,12 @@ public class CustomerSignup implements Initializable {
     Connection connection = DBConnection.getConnections();
 
     @FXML
-    void BackToCustomerLogin(ActionEvent event) throws Exception {
-        m.changeScene("CustomerLogin.fxml", "Customer Login");
+    void BackToCustomerLogin(ActionEvent event) throws IOException {
+        m.changeScene(event,"CustomerLogin.fxml", "Customer Login");
     }
 
     @FXML
-    void CustomerSignUp(ActionEvent event) throws Exception, SQLException {
+    void CustomerSignUp(ActionEvent event) throws IOException, SQLException {
         String CustomerName = CustomerNameField.getText();
         String CustomerNameID = CustomerNameIDField.getText();
         String CustomerPassword = CustomerPassField.getText();
@@ -57,7 +58,7 @@ public class CustomerSignup implements Initializable {
         if (CustomerName.isEmpty() || CustomerNameID.isEmpty() || CustomerPassword.isEmpty() || CustomerEmail.isEmpty() || CustomerPhone.isEmpty() || CustomerAddress.isEmpty()) {
             Main.showAlert(Alert.AlertType.WARNING, "Error", "Field can not be empty!");
         } else {
-            String sql = "INSERT INTO customerinfo(NAME, NID, PASSWORD, EMAIL, PHONE, ADDRESS) VALUES(?,?,?,?,?,?)";
+            String sql = "INSERT INTO customerinfo (NAME, NID, PASSWORD, EMAIL, PHONE, ADDRESS) VALUES(?,?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, CustomerName);
             preparedStatement.setString(2, CustomerNameID);
@@ -68,8 +69,8 @@ public class CustomerSignup implements Initializable {
             try {
                 preparedStatement.execute();
                 Main.showAlert(Alert.AlertType.INFORMATION, "Successful", "Sign up Successful!");
-                m.changeScene("CustomerLogin.fxml", "Customer Login");
-            } catch (SQLException e) {
+                m.changeScene(event,"CustomerLogin.fxml", "Customer Login");
+            } catch (SQLException | IOException e) {
                 Main.showAlert(Alert.AlertType.ERROR, "Error", "Account already exists with this ID!");
             } finally {
                 DBConnection.closeConnections();

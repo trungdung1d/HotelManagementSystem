@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -12,12 +11,11 @@
       <TableView fx:id="CustomerCheckOutDetailsTable" layoutX="19.0" layoutY="59.0" prefHeight="294.0" prefWidth="608.0">
         <columns>
           <TableColumn fx:id="IDCol" prefWidth="90.0" text="ID" />
-          <TableColumn fx:id="RoomCol" prefWidth="77.0" text="Room" />
-            <TableColumn fx:id="checkedInCol" prefWidth="96.0" text="Checked In" />
-            <TableColumn fx:id="checkedOutCol" prefWidth="96.0" text="Checked Out" />
-            <TableColumn fx:id="priceDay" prefWidth="84.0" text="Price/Day($)" />
-            <TableColumn fx:id="totalPriceCol" prefWidth="91.0" text="Total Price($)" />
-            <TableColumn fx:id="slipCol" prefWidth="72.0" text="Slip" />
+          <TableColumn fx:id="RoomCol" prefWidth="50.66667938232422" text="Room" />
+            <TableColumn fx:id="checkedInCol" prefWidth="144.66664123535156" text="Checked In" />
+            <TableColumn fx:id="checkedOutCol" prefWidth="102.6666259765625" text="Checked Out" />
+            <TableColumn fx:id="priceDay" prefWidth="116.66671752929688" text="Price/Day($)" />
+            <TableColumn fx:id="totalPriceCol" prefWidth="102.66668701171875" text="Total Price($)" />
         </columns>
       </TableView>
       <TextField fx:id="CustomerCheckOutDetailsSearch" layoutX="218.0" layoutY="20.0" prefHeight="25.0" prefWidth="193.0" promptText="Search Anything" styleClass="searchBox">
@@ -25,6 +23,5 @@
             <Insets left="29.0" />
          </padding>
       </TextField>
-      <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="228.0" layoutY="37.0" />
    </children>
 </AnchorPane>

@@ -3,7 +3,7 @@ package com.example.hotelmanagementsystem.Database.TableView;
 public class ManagerCheckInDetailsTable {
     String ID, Name, Room, Priceday, Checkedin, Address;
 
-    public ManagerCheckInDetailsTable(String ID,String Name,String Room,String Priceday,String Checkedin,String Address){
+    public ManagerCheckInDetailsTable(String ID, String Name, String Room, String Priceday, String Checkedin, String Address) {
         this.ID = ID;
         this.Name = Name;
         this.Room = Room;
@@ -16,8 +16,8 @@ public class ManagerCheckInDetailsTable {
         return ID;
     }
 
-    public void setID(String id) {
-        this.ID = id;
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
     public String getName() {
@@ -25,7 +25,7 @@ public class ManagerCheckInDetailsTable {
     }
 
     public void setName(String name) {
-        this.Name = name;
+        Name = name;
     }
 
     public String getRoom() {
@@ -33,28 +33,30 @@ public class ManagerCheckInDetailsTable {
     }
 
     public void setRoom(String room) {
-        this.Room = Room;
+        Room = room;
     }
 
-    public String getPriceDay() {
+    public String getPriceday() {
         return Priceday;
     }
 
-    public void setPriceDay(String priceday) {
-        this.Priceday = priceday;
+    public void setPriceday(String priceday) {
+        Priceday = priceday;
     }
 
-    public String getCheckedIn() {
+    public String getCheckedin() {
         return Checkedin;
     }
 
-    public void setCheckedIn(String checkedin) {
-        this.Checkedin = checkedin;
+    public void setCheckedin(String checkedin) {
+        Checkedin = checkedin;
     }
 
-    public String getAddress() { return Address;}
+    public String getAddress() {
+        return Address;
+    }
 
     public void setAddress(String address) {
-        this.Address = address;
+        Address = address;
     }
 }

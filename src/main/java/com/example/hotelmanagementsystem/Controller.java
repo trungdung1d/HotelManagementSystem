@@ -29,7 +29,6 @@ public class Controller implements  Initializable {
 
     @FXML
     void Admin_Login(ActionEvent event) throws  Exception{
-//        CommonTask.pageNavigation("/com.exmaple.hotelmanagement/AdminLogin.fxml", Main.stage, this.getClass(), "Admin Login", 600, 400);
         try {
             Stage stage = (Stage) adminLoginBtn.getScene().getWindow();
             stage.close();
@@ -48,7 +47,7 @@ public class Controller implements  Initializable {
         try {
             Stage stage = (Stage) customerLoginBtn.getScene().getWindow();
             Main m = new Main();
-            m.changeScene("CustomerLogin.fxml", "Customer Login");
+            m.changeScene(event,"CustomerLogin.fxml", "Customer Login");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -56,7 +55,13 @@ public class Controller implements  Initializable {
 
     @FXML
     void Manager_Login(ActionEvent event) {
-
+        try {
+            Stage stage = (Stage) managerLoginBtn.getScene().getWindow();
+            Main m = new Main();
+            m.changeScene(event,"ManagerLogin.fxml", "Manager Login");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override

@@ -52,11 +52,11 @@ public class CustomerRoomDetails extends DBConnection implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        roomNoCol.setCellValueFactory(new PropertyValueFactory<CustomerRoomTable, String>("ROOMNO"));
-        roomTypeCol.setCellValueFactory(new PropertyValueFactory<CustomerRoomTable, String>("TYPE"));
-        roomCapacityCol.setCellValueFactory(new PropertyValueFactory<CustomerRoomTable, String>("CAPACITY"));
-        price_DayCol.setCellValueFactory(new PropertyValueFactory<CustomerRoomTable, String>("PRICEDAY"));
-        roomStatusCol.setCellValueFactory(new PropertyValueFactory<CustomerRoomTable, String>("STATUS"));
+        roomNoCol.setCellValueFactory(new PropertyValueFactory<CustomerRoomTable, String>("Room"));
+        roomTypeCol.setCellValueFactory(new PropertyValueFactory<CustomerRoomTable, String>("Type"));
+        roomCapacityCol.setCellValueFactory(new PropertyValueFactory<CustomerRoomTable, String>("Capacity"));
+        price_DayCol.setCellValueFactory(new PropertyValueFactory<CustomerRoomTable, String>("Priceday"));
+        roomStatusCol.setCellValueFactory(new PropertyValueFactory<CustomerRoomTable, String>("Status"));
         showRoomTable();
     }
 
@@ -65,7 +65,7 @@ public class CustomerRoomDetails extends DBConnection implements Initializable {
         Connection connection = getConnections();
         try {
             if(!connection.isClosed()){
-                String sql = "SELECT * FROM ROOMINFO ORDER BY STATUS";
+                String sql = "SELECT * FROM roominfo ORDER BY STATUS";
                 PreparedStatement statement = connection.prepareStatement(sql);
                 ResultSet resultSet = statement.executeQuery();
                 while (resultSet.next()){
@@ -102,7 +102,7 @@ public class CustomerRoomDetails extends DBConnection implements Initializable {
                     return true; // Filter matches Room Type.
                 } else if (search.getCapacity().toLowerCase().indexOf(searchKeyword) != -1 ) {
                     return true; // Filter matches Room Capacity Column
-                } else if (search.getPriceDay().toLowerCase().indexOf(searchKeyword) != -1 ) {
+                } else if (search.getPriceday().toLowerCase().indexOf(searchKeyword) != -1 ) {
                     return true; // Filter matches Room Price
                 } else if(search.getStatus().toLowerCase().indexOf(searchKeyword) != -1){
                     return true; // Matches room status

@@ -16,8 +16,8 @@ public class CustomerCheckOutTable {
         return ID;
     }
 
-    public void setID(String id) {
-        this.ID = id;
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
     public String getRoom() {
@@ -25,38 +25,38 @@ public class CustomerCheckOutTable {
     }
 
     public void setRoom(String room) {
-        this.Room = room;
+        Room = room;
     }
 
-    public String getCheckedInDate() {
+    public String getCheckindate() {
         return Checkindate;
     }
 
-    public void setCheckedInDate(String checkedInDate) {
-        this.Checkindate = checkedInDate;
+    public void setCheckindate(String checkindate) {
+        Checkindate = checkindate;
     }
 
-    public String getCheckedOutDate() {
+    public String getCheckoutdate() {
         return Checkoutdate;
     }
 
-    public void setCheckedOutDate(String checkedOutDate) {
-        this.Checkoutdate = checkedOutDate;
+    public void setCheckoutdate(String checkoutdate) {
+        Checkoutdate = checkoutdate;
     }
 
-    public String getPriceDay() {
+    public String getPriceday() {
         return Priceday;
     }
 
-    public void setPriceDay(String priceDay) {
-        this.Priceday = priceDay;
+    public void setPriceday(String priceday) {
+        Priceday = priceday;
     }
 
-    public String getTotalPrice() {
+    public String getTotalprice() {
         return Totalprice;
     }
 
-    public void setTotalPrice(String totalPrice) {
-        this.Totalprice = totalPrice;
+    public void setTotalprice(String totalprice) {
+        Totalprice = totalprice;
     }
 }

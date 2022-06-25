@@ -19,8 +19,8 @@ public class ManagerCustomerTable {
         return ID;
     }
 
-    public void setID(String NID) {
-        this.ID = NID;
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
     public String getName() {
